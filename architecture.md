@@ -5,7 +5,11 @@ Internet Gateway (IGW): Acts as the bridge between the public internet and the V
 
 Subnet Separation: The architecture is divided into a Public Subnet (for the entry point) and a Private Subnet (for the data/web tier) to enhance security.
 
+#######################
 2. Public Subnet (DMZ)
+#######################
+
+
 Range: 10.10.1.0/24.
 
 Nginx Reverse Proxy / Load Balancer:
@@ -16,7 +20,9 @@ Private IP: 10.10.1.74.
 
 Instance ID: i-08ea8636fe364f56e.
 
+#######################
 Key Responsibilities:
+#######################
 
 Handles SSL Termination (converting HTTPS to HTTP).
 
@@ -26,20 +32,28 @@ Manages Content Caching to improve performance.
 
 Performs Health Checks on backends to ensure traffic only goes to "Healthy" servers.
 
+
+#############################3
 3. Private Subnet (Backend Tier)
+#######################
+
+
 Range: 10.0.10.0/24.
 
 Backend Servers:
 
-web-1 (Primary): Apache server at 10.10.1.71.
+web-1 (Primary): Apache server at 10.0.10.59
 
-web-2 (Primary): Apache server at 10.10.1.12.
+web-2 (Primary): Apache server at 10.0.10.52
 
-web-3 (Backup): Apache server at 10.10.1.140.
+web-3 (Backup): Apache server at 10.0.10.203
 
 Isolation: These servers have no direct internet access and no NAT Gateway, meaning they are completely shielded from the outside world.
 
+#############################
 4. Security Group Configurations
+#######################
+
 Nginx Security Group:
 
 SSH (22): Open to Admin IP only.
@@ -52,7 +66,11 @@ HTTP (80): Traffic is only allowed if it comes from the Nginx Security Group.
 
 SSH (22): Restricted to the Admin IP only.
 
+#######################
 5. Routing & Traffic Flow
+#######################
+
+
 All User Traffic: Must pass through the Nginx instance; there is no way to bypass it to reach the backends.
 
 Public Route Table: Directs all outbound traffic (0.0.0.0/0) to the Internet Gateway.
