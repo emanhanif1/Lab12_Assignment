@@ -1,0 +1,11 @@
+.terraform/
+*.tfstate
+*.tfstate.backup
+terraform.tfvars
+*.log
+.terraform.lock.hcl
+# Ignore AWS CLI installation files
+aws/
+awscliv2.zip
+install
+THIRD_PARTY_L...

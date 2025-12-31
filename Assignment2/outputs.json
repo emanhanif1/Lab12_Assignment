@@ -1,0 +1,141 @@
+{
+  "backend_servers_info": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "web-1": [
+          "object",
+          {
+            "instance_id": "string",
+            "private_ip": "string",
+            "public_ip": "string"
+          }
+        ],
+        "web-2": [
+          "object",
+          {
+            "instance_id": "string",
+            "private_ip": "string",
+            "public_ip": "string"
+          }
+        ],
+        "web-3": [
+          "object",
+          {
+            "instance_id": "string",
+            "private_ip": "string",
+            "public_ip": "string"
+          }
+        ]
+      }
+    ],
+    "value": {
+      "web-1": {
+        "instance_id": "i-00c0eff1448559bcf",
+        "private_ip": "10.0.10.59",
+        "public_ip": "51.112.43.218"
+      },
+      "web-2": {
+        "instance_id": "i-0105c8dd5a8070ae1",
+        "private_ip": "10.0.10.52",
+        "public_ip": "51.112.186.36"
+      },
+      "web-3": {
+        "instance_id": "i-0d2a690e1f3347e2a",
+        "private_ip": "10.0.10.203",
+        "public_ip": "40.172.215.170"
+      }
+    }
+  },
+  "backend_sg_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "sg-0b2971b0b6eb026b2"
+  },
+  "backend_web1_instance_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "i-0392e8f3517bee0ff"
+  },
+  "backend_web1_private_ip": {
+    "sensitive": false,
+    "type": "string",
+    "value": "10.0.10.177"
+  },
+  "backend_web1_public_ip": {
+    "sensitive": false,
+    "type": "string",
+    "value": "3.28.46.10"
+  },
+  "backend_web2_instance_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "i-056e26d7a2a24007f"
+  },
+  "backend_web2_private_ip": {
+    "sensitive": false,
+    "type": "string",
+    "value": "10.0.10.153"
+  },
+  "backend_web2_public_ip": {
+    "sensitive": false,
+    "type": "string",
+    "value": "3.28.132.73"
+  },
+  "backend_web3_instance_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "i-0e49ebc94db2388cc"
+  },
+  "backend_web3_private_ip": {
+    "sensitive": false,
+    "type": "string",
+    "value": "10.0.10.89"
+  },
+  "backend_web3_public_ip": {
+    "sensitive": false,
+    "type": "string",
+    "value": "3.28.43.87"
+  },
+  "configuration_guide": {
+    "sensitive": false,
+    "type": "string",
+    "value": "========================================\nDEPLOYMENT SUCCESSFUL! \n========================================\n    \nNext Steps:\n1. SSH into Nginx server: ssh ec2-user@3.28.137.93\n2. Edit Nginx config: sudo vim /etc/nginx/nginx.conf\n3. Update backend IPs in upstream block:\n   - BACKEND_IP_1: 10.0.10.59\n   - BACKEND_IP_2: 10.0.10.52\n   - BACKEND_IP_3: 10.0.10.203\n4. Restart Nginx: sudo systemctl restart nginx\n5. Test: https://3.28.137.93\n    \nBackend Servers:\n- web-1: 51.112.43.218 (private: 10.0.10.59)\n    - web-2: 51.112.186.36 (private: 10.0.10.52)\n    - web-3: 40.172.215.170 (private: 10.0.10.203)\n========================================\n"
+  },
+  "igw_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "igw-080720630546527d3"
+  },
+  "nginx_instance_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "i-0eee88943b7e23a56"
+  },
+  "nginx_public_ip": {
+    "sensitive": false,
+    "type": "string",
+    "value": "3.28.137.93"
+  },
+  "nginx_sg_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "sg-00ab12453f5a34a8b"
+  },
+  "route_table_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "rtb-06583758fa4e260ff"
+  },
+  "subnet_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "subnet-09d2a34248d1250e6"
+  },
+  "vpc_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "vpc-0ba1bcf63d7f30bf5"
+  }
+}

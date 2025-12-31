@@ -1,0 +1,11 @@
+# AWS CLI Installation files
+aws/
+install
+THIRD_PARTY_L*
+awscliv2.zip
+terraform_1.6.5_linux_amd64.zip
+# Terraform files
+.terraform.lock.hcl
+.terraform/
+*.tfstate
+*.tfstate.*
